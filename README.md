@@ -11,8 +11,8 @@
 
 ```
 anyenv install pyenv
-pyenv install 3.8.13
-poetry env use $HOME/.anyenv/envs/pyenv/versions/3.8.13/bin/python
+pyenv install pypy3.7-7.3.4
+poetry env use $HOME/.anyenv/envs/pyenv/versions/pypy3.7-7.3.4/bin/python
 ```
 
 ### Prepare
