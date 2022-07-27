@@ -24,7 +24,7 @@ def main():
     operations = [tuple(map(int, input().split())) for _ in range(N)]
 
     answers = []
-    funcs = [0,1]
+    funcs = [0, 1]
     for i in range(30):
         crr = 123  # @TODO: C++ の `crr=bit(c,k);` にあたる関数を定義する
         f: List[int] = []
