@@ -15,6 +15,8 @@ input = lambda: sys.stdin.readline().rstrip('\r\n').split()
 i_sesli = lambda: int(input()[0])
 i_mesli = lambda: list(map(int, input()))
 
+mapl = lambda function, iterable, *args: list(map(function, iterable, *args))
+
 
 def main():
     _ = i_sesli()
@@ -25,7 +27,7 @@ def main():
         if any(list(map(lambda x: x % 2 == 1, nums))):
             break
         else:
-            nums = list(map(lambda x: round(x / 2), nums))
+            nums = mapl(lambda x: round(x / 2), nums)
             cnt += 1
 
     print(cnt)
