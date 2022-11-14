@@ -11,11 +11,11 @@
 
 import sys
 
+mapl = lambda function, iterable, *args: list(map(function, iterable, *args))
+
 input = lambda: sys.stdin.readline().rstrip('\r\n').split()
 i_sesli = lambda: int(input()[0])
-i_mesli = lambda: list(map(int, input()))
-
-mapl = lambda function, iterable, *args: list(map(function, iterable, *args))
+i_mesli = lambda: mapl(int, input())
 
 
 def main():
