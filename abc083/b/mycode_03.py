@@ -29,8 +29,6 @@ import sys
 import pypyjit
 pypyjit.set_param('max_unroll_recursion=-1')
 
-mapl = lambda function, iterable, *args: list(map(function, iterable, *args))
-
 input = lambda: sys.stdin.readline().rstrip('\r\n').split()
 
 sys.setrecursionlimit(1000000)
@@ -44,7 +42,7 @@ def main():
 
 
 def is_in_range(n, bottom=0, top=1):
-    digits = mapl(int, list(str(n)))
+    digits = map(int, list(str(n)))
     return bottom <= sum(digits) <= top
 
 
