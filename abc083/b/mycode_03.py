@@ -36,7 +36,8 @@ sys.setrecursionlimit(1000000)
 
 def main():
     N, A, B = map(int, input())
-    ans = sum(filter(partial(is_in_range, bottom=A, top=B), range(1, N + 1)))
+    is_in_range_a_b = partial(is_in_range, bottom=A, top=B)
+    ans = sum(filter(is_in_range_a_b, range(1, N + 1)))
     print(ans)
     sys.exit()
 
