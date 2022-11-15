@@ -3,6 +3,13 @@
 https://atcoder.jp/contests/abs/tasks/abc083_b
 
 1 以上 N 以下の整数のうち、10 進法での各桁の和が A 以上 B 以下であるものの総和を求めてください。
+
+コード長: 538 Byte
+実行時間: 85 ms
+メモリ: 74064 KB
+
+mycode_01.py で for, if を使ってネストが深くなり、可読性が悪いことから
+`filter()` を使ったものに書き換えた。
 """
 
 # for debugging
