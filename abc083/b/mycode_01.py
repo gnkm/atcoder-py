@@ -3,6 +3,10 @@
 https://atcoder.jp/contests/abs/tasks/abc083_b
 
 1 以上 N 以下の整数のうち、10 進法での各桁の和が A 以上 B 以下であるものの総和を求めてください。
+
+コード長:523 Byte
+実行時間: 83 ms
+メモリ: 74356 KB
 """
 
 # for debugging
