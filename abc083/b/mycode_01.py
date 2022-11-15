@@ -33,7 +33,7 @@ def main():
     N, A, B = map(int, input())
     ans = 0
     for n in range(1, N + 1):
-        digits = mapl(int, list(str(n)))
+        digits = map(int, list(str(n)))
         if A <= sum(digits) <= B:
             ans += n
 
