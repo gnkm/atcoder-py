@@ -2,8 +2,8 @@
 
 ## Problems
 
-- [問題 - AtCoder Beginners Selection](https://atcoder.jp/contests/abs/tasks){:target="_blank"}
-- [AtCoder Problems](https://kenkoooo.com/atcoder/#/table/){:target="_blank"}
+- [問題 - AtCoder Beginners Selection](https://atcoder.jp/contests/abs/tasks)
+- [AtCoder Problems](https://kenkoooo.com/atcoder/#/table/)
 
 ## Usage
 
@@ -18,8 +18,8 @@ poetry env use $HOME/.anyenv/envs/pyenv/versions/pypy3.7-7.3.4/bin/python
 ### Prepare
 
 ```
-poetry install
 poetry shell
+poetry install
 ```
 
 ### Execute
