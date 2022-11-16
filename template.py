@@ -39,8 +39,12 @@ i_memls = lambda n: [i_mesls() for _ in range(n)]  # input multi element multi l
 
 sys.setrecursionlimit(1000000)
 
+INF = float('inf')
+
+
 def main():
     sys.exit()
+
 
 if __name__ == '__main__':
     main()
