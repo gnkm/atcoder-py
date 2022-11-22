@@ -2,7 +2,8 @@
 
 ## Problems
 
-- [問題 - AtCoder Beginners Selection](https://atcoder.jp/contests/abs/tasks)
+- [AtCoder Beginners Selection](https://atcoder.jp/contests/abs/tasks)
+- [競プロ典型 90 問](https://atcoder.jp/contests/typical90)
 - [AtCoder Problems](https://kenkoooo.com/atcoder/#/table/)
 
 ## Usage
