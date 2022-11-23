@@ -9,8 +9,12 @@ ABC 大学には N 人の一年生が在籍しています。クラスは 2 つ�
 - 学籍番号 L_j - R_j 番の 2 組生徒における、期末試験点数の合計
 - これら 2 つの値をそれぞれ求めよ。
 
-Result: TLE
-実行時間 2210 ms(制限 2000 ms)
+Result: AC
+実行時間 289 ms(制限 2000 ms)
+
+累積和を使用。
+下記のように定義すると 2200 ms 程かかる。
+cumulative_sum1 = [sum([p[1] for p in points[:i] if p[0] == 1]) for i in range(len(points) + 1)]
 """
 
 # for debugging
@@ -39,15 +43,22 @@ def main():
     Q = i_sesli()
     queries = i_memli(Q)
 
-    for q in queries:
-        sum1 = 0
-        sum2 = 0
-        for p in points[q[0]-1:q[1]]:
-            if p[0] == 1:
-                sum1 += p[1]
-            else:
-                sum2 += p[1]
+    cumulative_sum1 = [0]
+    cumulative_sum2 = [0]
+    acc1 = 0
+    acc2 = 0
+    for p in points:
+        if p[0] == 1:
+            acc1 += p[1]
+        else:
+            acc2 += p[1]
 
+        cumulative_sum1.append(acc1)
+        cumulative_sum2.append(acc2)
+
+    for q in queries:
+        sum1 = cumulative_sum1[q[1]] - cumulative_sum1[q[0] - 1]
+        sum2 = cumulative_sum2[q[1]] - cumulative_sum2[q[0] - 1]
         print(sum1, sum2)
 
     sys.exit()
