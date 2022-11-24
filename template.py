@@ -19,9 +19,8 @@ import pprint
 # Scripts starts here.
 import sys
 
-if 'PyPy' in sys.version:
-    import pypyjit
-    pypyjit.set_param('max_unroll_recursion=-1')
+import pypyjit
+pypyjit.set_param('max_unroll_recursion=-1')
 
 mapl = lambda function, iterable, *args: list(map(function, iterable, *args))
 
