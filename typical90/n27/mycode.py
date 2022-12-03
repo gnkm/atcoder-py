@@ -11,6 +11,10 @@ https://atcoder.jp/contests/typical90/tasks/typical90_aa
 
 何日目の登録申請が受理されるかを求めてください。
 
+Result: AC
+実行時間: 179 ms
+メモリ: 105476 KB
+
 memo: 登録済みユーザ名をリストで管理すると TLE になる。
 """
 
