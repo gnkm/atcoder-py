@@ -8,6 +8,7 @@ Synopsis:
 Example:
     python typical90/n55/make_sample_input.py typical90/n55/input_11.txt 10 2 0 2
     python typical90/n55/make_sample_input.py typical90/n55/input_12.txt 100 97 1 8
+    python typical90/n55/make_sample_input.py typical90/n55/input_13.txt 100 23_456_789 1 9
 """
 
 import icecream
@@ -27,7 +28,7 @@ def main():
     assert 0 <= q <= p
     digit_of_A_i = int(sys.argv[5])
     assert 0 <= digit_of_A_i <= 9
-    sequence_A = [randrange(0, 0.1 * 10 ** digit_of_A_i) for _ in range(size)]
+    sequence_A = [randrange(0, 10 ** digit_of_A_i) for _ in range(size)]
 
     with open(output_file_name, 'w', encoding='utf-8') as f:
         f.write(f'{size} {p} {q}')
