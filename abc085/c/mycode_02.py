@@ -9,8 +9,8 @@ Memo
 公式解説で計算量が O(N) となる方法として紹介されていたので実装した。
 https://www.youtube.com/watch?v=-QHM9Dk9hRw&t=2850s
 
-286 ms
-80464 KB
+183 ms
+62820 KB
 """
 
 # for debugging
@@ -28,8 +28,13 @@ input = lambda: sys.stdin.readline().rstrip('\r\n').split()
 def main():
     N, Y = map(int, input())
     Y_d1000 = Y // 1000
-    z_max = min(N, Y_d1000)
-    for z_candidate in range(z_max + 1):
+
+    z_max = (10 * N - Y_d1000) // 9
+    if z_max < 0:
+        print('-1 -1 -1')
+        sys.exit()
+
+    for z_candidate in range(max(0, (5 * N - Y_d1000) // 5), z_max + 1):
         if (z_candidate - Y_d1000) % 5 != 0:
             continue
         if 5 * N - Y_d1000 > 4 * z_candidate:
