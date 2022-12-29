@@ -26,8 +26,6 @@ https://atcoder.jp/contests/typical90/tasks/typical90_b
 は正しいカッコ列ではありません。
 
 また、 `(` の方が `)` よりも辞書順で早いものとします。
-
-Result: WA
 """
 
 # for debugging
@@ -42,6 +40,7 @@ else:
 import pprint
 
 # Scripts starts here.
+from itertools import product
 import sys
 
 import pypyjit
@@ -56,12 +55,41 @@ sys.setrecursionlimit(1000000)
 
 def main():
     length = int(input()[0])
-    [print(p) for p in sorted(parentheses_wa(length))]
+    [print(p) for p in parentheses(length)]
+    # [print(p) for p in sorted(parentheses_wa(length))]
     sys.exit()
 
 
 def parentheses(length):
-    return []
+    """bit 全探索
+
+    https://twitter.com/e869120/status/1377391097836544001/photo/1
+    """
+    if length % 2 != 0:
+        return []
+
+    ret = []
+    for candidate in product([0, 1], repeat=length):
+        if sum(candidate) != length / 2:
+            continue
+
+        left_minus_right = 0
+        string = ""
+        for elem in candidate:
+            if elem == 0:
+                string += "("
+                left_minus_right += 1
+            else:
+                left_minus_right -= 1
+                string += ")"
+
+            if left_minus_right < 0:
+                break
+
+        if left_minus_right == 0:
+            ret.append(string)
+
+    return ret
 
 
 def parentheses_wa(length):
