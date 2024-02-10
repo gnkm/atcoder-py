@@ -12,9 +12,8 @@
 ### Create virtual env
 
 ```
-anyenv install pyenv
-pyenv install pypy3.7-7.3.4
-poetry env use $HOME/.anyenv/envs/pyenv/versions/pypy3.7-7.3.4/bin/python
+asdf install python pypy3.10-7.3.12
+poetry env use $HOME/.asdf/installs/python/pypy3.10-7.3.12/bin/python
 ```
 
 ### Prepare

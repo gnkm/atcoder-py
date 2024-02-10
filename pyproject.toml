@@ -5,7 +5,7 @@ description = ""
 authors = ["gnkm <genki.matsunaga@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "3.7.10"
+python = "3.10.12"
 
 [tool.poetry.dev-dependencies]
 icecream = "^2.1.2"
