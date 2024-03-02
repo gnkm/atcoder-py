@@ -39,6 +39,7 @@ exit
 
 ```
 mkdir -p atcoder/abcXXX
+python -c 'import string; [print(s) for s in list(string.ascii_lowercase)[:6]]' | xargs -I@ mkdir -p atcoder/abcXXX/@
 python -c 'import string; [print(s) for s in list(string.ascii_lowercase)[:6]]' | xargs -I@ cp template.py atcoder/abcXXX/@/mycode.py
 python -c 'import string; [print(s) for s in list(string.ascii_lowercase)[:6]]' | xargs -I@ touch atcoder/abcXXX/@/input_0{1,2}.txt
 ```
